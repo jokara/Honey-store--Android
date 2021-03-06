@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pocetnaFragment">
+
+    <fragment
+        android:id="@+id/pocetnaFragment"
+        android:name="com.example.medenjaci.PocetnaFragment"
+        android:label="fragment_pocetna"
+        tools:layout="@layout/fragment_pocetna" >
+        <action
+            android:id="@+id/action_pocetnaFragment_to_kontaktFragment"
+            app:destination="@id/kontaktFragment" />
+        <action
+            android:id="@+id/action_pocetnaFragment_to_o_namaFragment"
+            app:destination="@id/o_namaFragment" />
+        <action
+            android:id="@+id/action_pocetnaFragment_to_prijavaFragment"
+            app:destination="@id/prijavaFragment" />
+        <action
+            android:id="@+id/action_pocetnaFragment_to_registracijaFragment"
+            app:destination="@id/registracijaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kontaktFragment"
+        android:name="com.example.medenjaci.KontaktFragment"
+        android:label="fragment_kontakt"
+        tools:layout="@layout/fragment_kontakt" >
+        <action
+            android:id="@+id/action_kontaktFragment_to_pocetnaFragment"
+            app:destination="@id/pocetnaFragment" />
+        <action
+            android:id="@+id/action_kontaktFragment_to_o_namaFragment"
+            app:destination="@id/o_namaFragment" />
+        <action
+            android:id="@+id/action_kontaktFragment_to_registracijaFragment"
+            app:destination="@id/registracijaFragment" />
+        <action
+            android:id="@+id/action_kontaktFragment_to_prijavaFragment"
+            app:destination="@id/prijavaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/o_namaFragment"
+        android:name="com.example.medenjaci.O_namaFragment"
+        android:label="fragment_o_nama"
+        tools:layout="@layout/fragment_o_nama" >
+        <action
+            android:id="@+id/action_o_namaFragment_to_pocetnaFragment"
+            app:destination="@id/pocetnaFragment" />
+        <action
+            android:id="@+id/action_o_namaFragment_to_kontaktFragment"
+            app:destination="@id/kontaktFragment" />
+        <action
+            android:id="@+id/action_o_namaFragment_to_registracijaFragment"
+            app:destination="@id/registracijaFragment" />
+        <action
+            android:id="@+id/action_o_namaFragment_to_prijavaFragment"
+            app:destination="@id/prijavaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/prijavaFragment"
+        android:name="com.example.medenjaci.PrijavaFragment"
+        android:label="fragment_prijava"
+        tools:layout="@layout/fragment_prijava" >
+        <action
+            android:id="@+id/action_prijavaFragment_to_pocetnaFragment"
+            app:destination="@id/pocetnaFragment" />
+        <action
+            android:id="@+id/action_prijavaFragment_to_kontaktFragment"
+            app:destination="@id/kontaktFragment" />
+        <action
+            android:id="@+id/action_prijavaFragment_to_o_namaFragment"
+            app:destination="@id/o_namaFragment" />
+        <action
+            android:id="@+id/action_prijavaFragment_to_registracijaFragment"
+            app:destination="@id/registracijaFragment" />
+        <action
+            android:id="@+id/action_prijavaFragment_to_pocetnaKupacFragment"
+            app:destination="@id/pocetnaKupacFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registracijaFragment"
+        android:name="com.example.medenjaci.RegistracijaFragment"
+        android:label="fragment_registracija"
+        tools:layout="@layout/fragment_registracija" >
+        <action
+            android:id="@+id/action_registracijaFragment_to_pocetnaFragment"
+            app:destination="@id/pocetnaFragment" />
+        <action
+            android:id="@+id/action_registracijaFragment_to_kontaktFragment"
+            app:destination="@id/kontaktFragment" />
+        <action
+            android:id="@+id/action_registracijaFragment_to_o_namaFragment"
+            app:destination="@id/o_namaFragment" />
+        <action
+            android:id="@+id/action_registracijaFragment_to_prijavaFragment"
+            app:destination="@id/prijavaFragment" />
+        <action
+            android:id="@+id/action_registracijaFragment_to_pocetnaKupacFragment"
+            app:destination="@id/pocetnaKupacFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pocetnaKupacFragment"
+        android:name="com.example.medenjaci.PocetnaKupacFragment"
+        android:label="fragment_pocetna_kupac"
+        tools:layout="@layout/fragment_pocetna_kupac" >
+        <action
+            android:id="@+id/action_pocetnaKupacFragment_to_prijavaFragment"
+            app:destination="@id/prijavaFragment" />
+        <action
+            android:id="@+id/action_pocetnaKupacFragment_to_detaljiFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/pocetnaFragment"
+            app:destination="@id/detaljiFragment" />
+        <action
+            android:id="@+id/action_pocetnaKupacFragment_to_azuriranjeFragment"
+            app:destination="@id/azuriranjeFragment" />
+        <action
+            android:id="@+id/action_pocetnaKupacFragment_to_korpaFragment"
+            app:destination="@id/korpaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detaljiFragment"
+        android:name="com.example.medenjaci.DetaljiFragment"
+        android:label="fragment_detalji"
+        tools:layout="@layout/fragment_detalji" >
+        <action
+            android:id="@+id/action_detaljiFragment_to_pocetnaKupacFragment"
+            app:destination="@id/pocetnaKupacFragment" />
+        <action
+            android:id="@+id/action_detaljiFragment_to_prijavaFragment"
+            app:destination="@id/prijavaFragment" />
+        <action
+            android:id="@+id/action_detaljiFragment_to_azuriranjeFragment"
+            app:destination="@id/azuriranjeFragment" />
+        <action
+            android:id="@+id/action_detaljiFragment_to_korpaFragment"
+            app:destination="@id/korpaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/azuriranjeFragment"
+        android:name="com.example.medenjaci.AzuriranjeFragment"
+        android:label="fragment_azuriranje"
+        tools:layout="@layout/fragment_azuriranje" >
+        <action
+            android:id="@+id/action_azuriranjeFragment_to_pocetnaKupacFragment"
+            app:destination="@id/pocetnaKupacFragment" />
+        <action
+            android:id="@+id/action_azuriranjeFragment_to_prijavaFragment"
+            app:destination="@id/prijavaFragment" />
+        <action
+            android:id="@+id/action_azuriranjeFragment_to_korpaFragment"
+            app:destination="@id/korpaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/korpaFragment"
+        android:name="com.example.medenjaci.KorpaFragment"
+        android:label="fragment_korpa"
+        tools:layout="@layout/fragment_korpa" >
+        <action
+            android:id="@+id/action_korpaFragment_to_azuriranjeFragment"
+            app:destination="@id/azuriranjeFragment" />
+        <action
+            android:id="@+id/action_korpaFragment_to_pocetnaKupacFragment"
+            app:destination="@id/pocetnaKupacFragment" />
+        <action
+            android:id="@+id/action_korpaFragment_to_prijavaFragment"
+            app:destination="@id/prijavaFragment" />
+        <action
+            android:id="@+id/action_korpaFragment_to_korpa1Fragment"
+            app:destination="@id/korpa1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/korpa1Fragment"
+        android:name="com.example.medenjaci.Korpa1Fragment"
+        android:label="fragment_korpa1"
+        tools:layout="@layout/fragment_korpa1" >
+        <action
+            android:id="@+id/action_korpa1Fragment_to_korpaFragment"
+            app:destination="@id/korpaFragment" />
+        <action
+            android:id="@+id/action_korpa1Fragment_to_detaljiFragment"
+            app:destination="@id/detaljiFragment" />
+        <action
+            android:id="@+id/action_korpa1Fragment_to_pocetnaKupacFragment"
+            app:destination="@id/pocetnaKupacFragment" />
+        <action
+            android:id="@+id/action_korpa1Fragment_to_azuriranjeFragment"
+            app:destination="@id/azuriranjeFragment" />
+        <action
+            android:id="@+id/action_korpa1Fragment_to_prijavaFragment"
+            app:destination="@id/prijavaFragment" />
+    </fragment>
+</navigation>
